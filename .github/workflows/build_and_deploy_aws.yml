@@ -27,6 +27,8 @@ jobs:
   docker:
     name: Publish Docker Image
     runs-on: ubuntu-latest
+    needs: build
+
     steps:
       - uses: actions/checkout@v2
       - name: Docker username 
@@ -48,6 +50,8 @@ jobs:
   deployAws:
     name: Deploy in AWS EBS
     runs-on: ubuntu-latest
+    needs: docker
+    
     steps:
     - name: Checkout source code
       uses: actions/checkout@v2
