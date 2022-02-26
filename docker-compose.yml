@@ -1,0 +1,13 @@
+version: "3"
+services:
+   #tripexpensetracker
+   tripexpensetracker:
+      image: nitinrai17/tripexpensetracker:0.0.1
+      container_name: 'tripexpensetracker'
+      build:
+         context: ./ 
+         dockerfile: Dockerfile
+      expose:
+         - 80
+      ports:
+         - '80:80'
