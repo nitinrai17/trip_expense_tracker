@@ -4,6 +4,7 @@ import {PushToTalkButton , PushToTalkButtonContainer, ErrorPanel } from '@speech
 
 import Main from './components/Main/Main';
 import Details from './components/Details/Details';
+import Footer from './components/Footer/Footer';
 import useStyles from './styles';
 import { SpeechState, useSpeechContext } from '@speechly/react-client';
 const App = () => {
@@ -36,12 +37,12 @@ const App = () => {
             <Grid item xs={12} sm={4} className={classes.last}>
                 <Details title="Expense" />
             </Grid>
-
         </Grid>
         <PushToTalkButtonContainer>
             <PushToTalkButton/>
             <ErrorPanel/>
         </PushToTalkButtonContainer>
+        <Footer/>
     </div>
   )
 }
