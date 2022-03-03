@@ -4,7 +4,9 @@ WORKDIR '/app'
 
 COPY ./package.json  ./
 
-RUN npm install -g npm@8.5.1
+RUN npm install -g npm@8.3.1 --force
+
+RUN npm install -g npm@latest --force
 
 COPY . .
 
