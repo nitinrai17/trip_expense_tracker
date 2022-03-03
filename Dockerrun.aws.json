@@ -1,0 +1,19 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [       
+        {
+            "name": "tripexpensetracker",
+            "image": "nitinrai17/tripexpensetracker:0.0.1",
+            "hostname": "tripexpensetracker",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "memory": 128
+        }
+    ]
+
+}
