@@ -10,10 +10,6 @@ const List = () => {
     
     const {transactions,deleteTransaction} = useContext(TripExpenseTrackerContext);
 
-
-    console.log(transactions);
-    
-
     return (
             <MUIList dense={false} className={classes.list}>
                 {transactions.map((transaction )=>(
