@@ -40,7 +40,7 @@ const Form = () => {
             }else if(segment.intent.intent === 'add_income'){
                 setFormData({...formData, type: 'Income'});
             }else if (segment.isFinal && segment.intent.intent === "create_transaction"){
-                return createTransaction();
+                //return createTransaction();
             }else if (segment.isFinal && segment.intent.intent === "cancel_transaction"){ 
                 return setFormData(initialState);
             }
@@ -67,8 +67,8 @@ const Form = () => {
                 }
             });
 
-            if(segment.isFinal && formData.amount && formData.category && formData.type && formData.date){
-                createTransaction();
+            if(segment.isFinal && formData.amount && formData.category && formData.type && formData.date){        
+                return createTransaction();
             }
 
         }
