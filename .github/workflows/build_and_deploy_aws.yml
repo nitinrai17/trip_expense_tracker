@@ -35,7 +35,7 @@ jobs:
         run: echo ${{ secrets.DOCKER_USERNAME }}
       
       - name: print Github run id  
-        run: echo ${GITHUB_RUN_ID}
+        run: echo ${{ github.run_id }}
      
       - name: Building Docker Image
         run: docker build . -t ${{ secrets.DOCKER_REPO }}:0.0.1
@@ -66,7 +66,7 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: tripexpensetracker
         environment_name: Tripexpensetracker-env
-        version_label: ${GITHUB_RUN_ID}
+        version_label: ${{ github.run_id }}
         region: ap-south-1
         use_existing_version_if_available: true
         deployment_package: deploy.zip
