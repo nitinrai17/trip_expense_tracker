@@ -32,7 +32,14 @@ build :-
 
 run :- 
 ```
-    docker run -p 80:80 nitinrai17/tripexpensetracker:0.0.1
+    docker run -p 80:80 -p 443:443 nitinrai17/tripexpensetracker:0.0.1
+```
+
+
+
+### Openssl Certificate
+```
+openssl.exe req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out nginx-certificate.crt -keyout nginx.key
 ```
 
 
